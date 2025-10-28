@@ -34,7 +34,7 @@ ipcMain.handle('salvar-tarefas', async(event, tarefas) =>{
 
 ipcMain.handle('carregar-tarefas', async ()=>{
     const userDataPath = app.getPath('userData')
-    const filePath = patj.join(userDataPath, 'tarefas.json')
+    const filePath = path.join(userDataPath, 'tarefas.json')
 
     try{
         if(fs.existsSync(filePath)){
